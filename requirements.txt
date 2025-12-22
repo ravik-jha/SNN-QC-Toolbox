@@ -8,3 +8,4 @@ tqdm==4.66.4
 torch
 pennylane==0.34.0
 autoray==0.6.9
+plotly==5.8
