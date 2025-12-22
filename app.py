@@ -1,25 +1,4 @@
 import streamlit as st
-
-PASSWORD = "ravi2025"
-
-# Initialize auth state
-if "authenticated" not in st.session_state:
-    st.session_state.authenticated = False
-
-# Show password input only if not authenticated
-if not st.session_state.authenticated:
-    pwd = st.text_input("Enter password", type="password")
-
-    if pwd == PASSWORD:
-        st.session_state.authenticated = True
-        st.rerun()   # refresh app to hide password
-    else:
-        st.stop()
-
-# 🔓 From here onward, user is authenticated
-st.success("Welcome! Access granted.")
-
-
 import torch
 import numpy as np
 import pandas as pd
@@ -602,4 +581,5 @@ with st.expander("📚 References & Acknowledgement"):
     This toolbox demonstration was developed as part of the research conducted at the Intelligent Systems Research Centre, Ulster University. 
     It is intended solely for academic research and demonstration purposes. This is a foundational prototype; all rights regarding future development and commercial 
     utilization are reserved and subject to copyright.
+
     """)
